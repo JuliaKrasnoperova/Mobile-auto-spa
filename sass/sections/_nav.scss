@@ -1,0 +1,27 @@
+.nav {
+  margin-top: 40px;
+  margin-left: 200px;
+}
+
+.nav__list {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 1.2;
+  letter-spacing: 0.48px;
+  color: $textColor;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+
+  a {
+    text-decoration: none;
+    color: $textColor;
+    transition: 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      color: $accentText;
+    }
+  }
+}

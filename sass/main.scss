@@ -1,0 +1,23 @@
+// Base
+@import "./base/vars";
+@import "./base/_mixins";
+@import "./base/base";
+
+// Sections
+@import "./sections/header";
+@import "./sections/section-functional";
+@import "./sections/section-cta";
+@import "./sections/section-tasks";
+@import "./sections/section-focus";
+@import "./sections/section-price";
+@import "./sections/section-clients";
+@import "./sections/_footer";
+@import "./sections/nav";
+
+// Blocks
+@import "./blocks/_title";
+@import "./blocks/page-decoration";
+@import "./blocks/button";
+
+// Media
+@import "./media/media.scss";
