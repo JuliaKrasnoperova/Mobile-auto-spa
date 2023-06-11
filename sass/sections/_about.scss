@@ -1,0 +1,31 @@
+.about {
+  margin-top: 80px;
+}
+.about__title {
+  text-align: center;
+}
+
+.about__info {
+  display: flex;
+  gap: 134px;
+  justify-content: center;
+}
+
+.about__item-header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.about__item-text {
+  font-family: "ReformaGroteskMediumC";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.2;
+  letter-spacing: 0.48px;
+  max-width: 526px;
+}
+.about__photo {
+}
