@@ -1,0 +1,51 @@
+.tabs__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 50px;
+  row-gap: 20px;
+
+  font-family: "ReformaGroteskBoldC";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.8px;
+
+  margin-bottom: 70px;
+}
+
+.tabs__item {
+  &_active {
+    color: $accentText;
+  }
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.tabs__item:hover {
+  color: $accentText;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}

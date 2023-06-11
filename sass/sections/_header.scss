@@ -10,6 +10,18 @@
   background-repeat: no-repeat;
 }
 
+.header__services {
+  margin: 0 auto;
+  width: 100%;
+  height: 1024px;
+  position: relative;
+  z-index: 99;
+  background-image: url(./../img/header/header-services.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .header__nav {
   margin-top: 40px;
   margin-left: 200px;
@@ -40,6 +52,10 @@
   font-size: 40px;
   line-height: 1.2;
   text-align: center;
+}
+
+.header__description-services {
+  margin-bottom: 240px;
 }
 
 .header__button {
