@@ -18,10 +18,10 @@
         <nav class="nav">
             <ul class="nav__list">
                 <li><a href="#" class="nav__link">Home</a></li>
-                <li><a href="#" class="nav__link">About Us</a></li>
+                <li><a href="#about" class="nav__link">About Us</a></li>
                 <li><a href="#" class="nav__link">Our Services</a></li>
-                <li><a href="#" class="nav__link">More Details</a></li>
-                <li><a href="#" class="nav__link">Contact Us</a></li>
+                <li><a href="#more" class="nav__link">More Details</a></li>
+                <li><a href="#feedback" class="nav__link">Contact Us</a></li>
             </ul>
         </nav>
         <div class="header__content">
@@ -61,7 +61,7 @@
             </div>
         </div>
     </header>
-    <section class="about">
+    <section id="about" class="about">
         <div class="container">
             <h2 class="about__title title-h2">ABOUT us</h2>
             <span class="page-decoration">
@@ -115,7 +115,7 @@
             </div>
         </div>
     </section>
-    <section class="more">
+    <section id="more" class="more">
         <div class="container">
             <h2 class="more__title title-h2">More Details</h2>
             <span class="page-decoration">
@@ -143,6 +143,51 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <section id="feedback" class="feedback">
+        <div class="container">
+            <h2 class="feedback__title title-h2">we will answer any question</h2>
+            <span class="page-decoration">
+                <svg width="147" height="16" viewBox="0 0 147 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="8" width="10" height="10" transform="rotate(-45 0 8)" fill="#DB3138" />
+                    <rect x="44.0713" y="8" width="10" height="10" transform="rotate(-45 44.0713 8)" fill="#DB3138" />
+                    <rect x="88.1426" y="8" width="10" height="10" transform="rotate(-45 88.1426 8)" fill="#DB3138" />
+                    <rect x="132.213" y="8" width="10" height="10" transform="rotate(-45 132.213 8)" fill="#DB3138" />
+                </svg>
+            </span>
+            <form class="form">
+                <fieldset class="form-group">
+                    <div class="form-group-row">
+                        <input class="form__input" type="text" placeholder="NAME">
+                        <input class="form__input" type="tel" placeholder="CELL PHONE NUMBER" required>
+                    </div>
+                    <div class="form-group-row">
+                        <textarea class="form__textarea" name="message"
+                            placeholder="question about our services"></textarea>
+                        <div class="socials">
+                            <a href="#" class="socials__link">
+                                <img class="socials__img" src="./img/socials/instagram.svg" alt="imstagram">
+                            </a>
+                            <a href="https://www.tiktok.com/@mobileautospa777?_t=8d4iWIbZo5q&_r=1"
+                                class="socials__link">
+                                <img class="socials__img" src="./img/socials/tiktok.svg" alt="tiktok">
+                            </a>
+                            <a href="https://youtube.com/@MobileAutoSpa777" class="socials__link">
+                                <img class="socials__img" src="./img/socials/youtube.svg" alt="youtube">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="form-group-row">
+                        <button class="button form__button" type="submit">Send</button>
+                        <div class="form__extrainfo">
+                            <div class="form__location">mountain view, california</div>
+                            <a href="mailto:mobileautospa777@gmail.com"
+                                class="form__email">mobileautospa777@gmail.com</a>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
         </div>
     </section>
 

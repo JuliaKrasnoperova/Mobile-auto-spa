@@ -1,5 +1,9 @@
 .button {
-  padding: 20px 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 60px;
   background: #db3138;
   font-family: "ReformaGroteskDemiC";
   font-style: normal;
@@ -9,6 +13,7 @@
   text-align: center;
   letter-spacing: 0.8px;
   text-transform: uppercase;
+  cursor: pointer;
 
   text-decoration: none;
   color: $textColor;

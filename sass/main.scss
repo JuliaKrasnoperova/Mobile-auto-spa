@@ -7,6 +7,7 @@
 @import "./sections/nav";
 @import "./sections/about";
 @import "./sections/more";
+@import "./sections/feedback";
 
 // Blocks
 @import "./blocks/_title";
@@ -14,6 +15,8 @@
 @import "./blocks/_title-h3";
 @import "./blocks/page-decoration";
 @import "./blocks/button";
+@import "./blocks/form";
+@import "./blocks/socials";
 
 // Media
 @import "./media/media.scss";

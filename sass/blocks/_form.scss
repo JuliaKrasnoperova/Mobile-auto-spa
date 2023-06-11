@@ -1,0 +1,131 @@
+.form {
+  margin: 0 auto;
+  width: 800px;
+  background: #ffffff;
+  box-shadow: 0px 10px 20px rgba(211, 211, 211, 0.25);
+  padding: 40px;
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+.form-group:last-of-type {
+  margin-bottom: 35px;
+}
+
+.form-group-title {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.form__input {
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 50px;
+  font-family: "ReformaGroteskDemiC";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: $textColor;
+  background: #ffffff;
+  border: 1px solid #898989;
+  width: 100%;
+}
+
+.form__input:focus {
+  outline-color: #db3138;
+}
+.form__input::placeholder {
+  color: #898989;
+}
+
+.form__textarea {
+  padding: 15px 25px;
+  width: 625px;
+  height: 185px;
+  font-family: "ReformaGroteskDemiC";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: $textColor;
+  background: #ffffff;
+  border: 1px solid #898989;
+  resize: none;
+}
+.form__textarea::placeholder {
+  color: #898989;
+}
+.form__textarea:focus {
+  outline-color: #db3138;
+}
+
+.form-group-row {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.form__extrainfo {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: self-end;
+  gap: 20px;
+}
+.form__extrainfo,
+.form__location {
+  font-family: "ReformaGroteskDemiC";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+.form__location::before {
+  display: block;
+  content: "";
+  background-image: url(./../img/extrainfo/location.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 17px;
+  height: 21px;
+}
+.form__location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.form__email {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: $textColor;
+  transition: 0.2s;
+}
+
+.form__email:hover {
+  color: $accentText;
+}
+
+.form__email::before {
+  display: block;
+  content: "";
+  background-image: url(./../img/extrainfo/email.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 21px;
+  height: 17px;
+}
+.form__button {
+  margin-top: 25px;
+}
