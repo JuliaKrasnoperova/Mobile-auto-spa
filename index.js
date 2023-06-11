@@ -1,3 +1,9 @@
+// preloader
+window.onload = function () {
+  let preloader = document.getElementById("preloader");
+  preloader.style.display = "none";
+};
+
 window.addEventListener("DOMContentLoaded", () => {
   // Tabs
   const tabs = document.querySelectorAll(".tabs__item");
