@@ -10,6 +10,11 @@
   background-repeat: no-repeat;
 }
 
+.header__nav {
+  margin-top: 40px;
+  margin-left: 200px;
+}
+
 .header:before {
   z-index: -1;
   content: "";
