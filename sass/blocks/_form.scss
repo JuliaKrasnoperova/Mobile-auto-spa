@@ -38,7 +38,8 @@
 }
 
 .form__input:focus {
-  outline-color: #db3138;
+  outline: none;
+  border: 1px solid #db3138;
 }
 .form__input::placeholder {
   color: #898989;
@@ -64,7 +65,8 @@
   color: #898989;
 }
 .form__textarea:focus {
-  outline-color: #db3138;
+  outline: none;
+  border: 1px solid #db3138;
 }
 
 .form-group-row {

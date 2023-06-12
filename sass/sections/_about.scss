@@ -8,7 +8,7 @@
 
 .about__info {
   display: flex;
-  gap: 134px;
+  gap: 60px;
   justify-content: center;
 }
 
@@ -16,7 +16,7 @@
   display: flex;
   align-items: center;
   gap: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .about__item-text {
@@ -26,7 +26,8 @@
   font-size: 30px;
   line-height: 1.2;
   letter-spacing: 0.48px;
-  max-width: 526px;
+  max-width: 700px;
+  text-align: justify;
 }
 .about__photo {
 }

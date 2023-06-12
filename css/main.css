@@ -105,6 +105,24 @@ legend {
   padding: 50px 0;
 }
 
+@font-face {
+  font-family: "ReformaGroteskMediumC";
+  src: url("../fonts/ReformaGroteskMediumC.eot");
+  src: url("../fonts/ReformaGroteskMediumC.eot?#iefix") format("embedded-opentype"), url("../fonts/ReformaGroteskMediumC.woff") format("woff"), url("../fonts/ReformaGroteskMediumC.woff2") format("woff2"), url("../fonts/ReformaGroteskMediumC (1).otf"), url("../fonts/ReformaGroteskMediumC.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "ReformaGroteskDemiC";
+  src: url("../fonts/ReformaGroteskDemiC.eot");
+  src: url("../fonts/ReformaGroteskDemiC.eot?#iefix") format("embedded-opentype"), url("../fonts/ReformaGroteskDemiC.woff") format("woff"), url("../fonts/ReformaGroteskDemiC.woff2") format("woff2"), url("../fonts/ReformaGroteskDemiC.otf (2)"), url("../fonts/ReformaGroteskDemiC.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "ReformaGroteskBoldC";
+  src: url("../fonts/ReformaGroteskBoldC.eot");
+  src: url("../fonts/ReformaGroteskBoldC.eot?#iefix") format("embedded-opentype"), url("../fonts/ReformaGroteskBoldC.woff") format("woff"), url("../fonts/ReformaGroteskBoldC.woff2") format("woff2"), url("../fonts/ReformaGroteskBoldC (1).otf"), url("../fonts/ReformaGroteskBoldC.ttf") format("truetype");
+  font-weight: 700;
+}
 .header {
   margin: 0 auto;
   width: 100%;
@@ -269,7 +287,7 @@ legend {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 134px;
+  gap: 60px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -283,7 +301,7 @@ legend {
       -ms-flex-align: center;
           align-items: center;
   gap: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .about__item-text {
@@ -293,7 +311,8 @@ legend {
   font-size: 30px;
   line-height: 1.2;
   letter-spacing: 0.48px;
-  max-width: 526px;
+  max-width: 700px;
+  text-align: justify;
 }
 
 .more {
@@ -599,7 +618,8 @@ legend {
 }
 
 .form__input:focus {
-  outline-color: #db3138;
+  outline: none;
+  border: 1px solid #db3138;
 }
 
 .form__input::-webkit-input-placeholder {
@@ -652,7 +672,8 @@ legend {
 }
 
 .form__textarea:focus {
-  outline-color: #db3138;
+  outline: none;
+  border: 1px solid #db3138;
 }
 
 .form-group-row {
