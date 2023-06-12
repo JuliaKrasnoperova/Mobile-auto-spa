@@ -454,6 +454,8 @@ legend {
 }
 .tabs__item_active {
   color: #db3138;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .tabs__item:hover {
