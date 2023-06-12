@@ -45,6 +45,10 @@
   color: #898989;
 }
 
+.form__input.error {
+  box-shadow: 0 0 5px $accentText;
+}
+
 .form__textarea {
   padding: 15px 25px;
   width: 625px;

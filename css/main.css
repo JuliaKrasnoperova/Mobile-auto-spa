@@ -641,6 +641,11 @@ legend {
   color: #898989;
 }
 
+.form__input.error {
+  -webkit-box-shadow: 0 0 5px #db3138;
+          box-shadow: 0 0 5px #db3138;
+}
+
 .form__textarea {
   padding: 15px 25px;
   width: 625px;

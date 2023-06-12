@@ -98,12 +98,12 @@
     <section id="services" class="services">
         <div class="container">
             <div class="tabs">
-                <ul class="tabs__list">
-                    <li class="tabs__item tabs__item_active">SIGNATURE DETAIL </li>
-                    <li class="tabs__item">SIGNATURE DETAIL </li>
-                    <li class="tabs__item">SIGNATURE DETAIL </li>
-                    <li class="tabs__item">SIGNATURE DETAIL </li>
-                </ul>
+                <div class="tabs__list">
+                    <div class="tabs__item tabs__item_active">SIGNATURE DETAIL </div>
+                    <div class="tabs__item">SIGNATURE DETAIL </div>
+                    <div class="tabs__item">SIGNATURE DETAIL </div>
+                    <div class="tabs__item">SIGNATURE DETAIL </div>
+                </div>
 
                 <div class="tabs__content">
                     <h4 class="services__title title-h4">Service Description</h4>
@@ -166,17 +166,19 @@
                     <rect x="132.213" y="8" width="10" height="10" transform="rotate(-45 132.213 8)" fill="#DB3138" />
                 </svg>
             </span>
-            <form class="form">
+            <form action="" id="form" class="form">
                 <fieldset class="form-group">
                     <div class="form-group-row">
-                        <input class="form__input" type="text" placeholder="NAME">
-                        <input class="form__input" type="tel" placeholder="CELL PHONE NUMBER" required>
+                        <input class=" input name form__input require" type="text" name="name" placeholder="NAME">
+                        <input class="input form__input require tel" type="tel" name="phone"
+                            placeholder="CELL PHONE NUMBER">
                     </div>
                     <div class="form-group-row">
-                        <textarea class="form__textarea" name="message"
+                        <textarea class="form__textarea input require" name="message"
                             placeholder="question about our services"></textarea>
                         <div class="socials">
-                            <a href="#" class="socials__link">
+                            <a href="https://instagram.com/mobile_auto_spa_bay_area?igshid=OGQ5ZDc2ODk2ZA=="
+                                class="socials__link">
                                 <img class="socials__img" src="./img/socials/instagram.svg" alt="imstagram">
                             </a>
                             <a href="https://www.tiktok.com/@mobileautospa777?_t=8d4iWIbZo5q&_r=1"
@@ -189,7 +191,7 @@
                         </div>
                     </div>
                     <div class="form-group-row">
-                        <button class="button form__button" type="submit">Send</button>
+                        <button id="button" class="button form__button" type="submit">Send</button>
                         <div class="form__extrainfo">
                             <div class="form__location">mountain view, california</div>
                             <a href="mailto:mobileautospa777@gmail.com"
@@ -216,8 +218,8 @@
 
 
 
-
-    <script src="./index.js"></script>
+    <script src="./libs/inputmask.min.js" defer></script>
+    <script src="./index.js" defer></script>
 </body>
 
 </html>
