@@ -402,7 +402,8 @@ legend {
 }
 
 .services {
-  margin-top: 80px;
+  margin-top: 40px;
+  padding-top: 40px;
 }
 
 .services__title {
