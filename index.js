@@ -9,6 +9,7 @@ window.addEventListener("DOMContentLoaded", () => {
   // form Validation
   const form = document.querySelectorAll(".form");
   const inputArea = document.querySelectorAll(".input");
+  const textArea = document.querySelectorAll(".form__textarea");
 
   function error() {
     inputArea.forEach((item) => {
@@ -16,17 +17,35 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  function removeError() {
+    inputArea.forEach((item) => {
+      item.classList.remove("error");
+    });
+  }
+
+  function cleanForm() {
+    inputArea.forEach((input) => {
+      input.value = "";
+    });
+    textArea.forEach((textArea) => {
+      textArea.value = "";
+    });
+  }
+
   function validation(form) {
     let result = true;
+    removeError();
+    const allInputs = form.querySelectorAll(".input");
 
-    const allInputs = form.querySelectorAll("input");
-    for (const input of allInputs) {
-      if (input.value == "") {
-        console.log("error");
-        error();
-        result = false;
+    allInputs.forEach((item) => {
+      if (item.dataset.require == "true") {
+        if (item.value == "") {
+          console.log("error");
+          error();
+          result = false;
+        }
       }
-    }
+    });
 
     return result;
   }
@@ -36,9 +55,7 @@ window.addEventListener("DOMContentLoaded", () => {
       event.preventDefault();
 
       if (validation(this) === true) {
-        inputArea.forEach((item) => {
-          item.classList.remove("error");
-        });
+        cleanForm();
       }
     });
   });

@@ -21,9 +21,13 @@ body {
   margin: 0;
   font-family: "ReformaGroteskMediumC", sans-serif;
   color: $textColor;
+
+  &._locked {
+    overflow: hidden;
+  }
 }
 
-body > * {
+body>* {
   flex-shrink: 0;
   /* sticky footer */
 }

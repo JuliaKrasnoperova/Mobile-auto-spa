@@ -45,8 +45,10 @@
   color: #898989;
 }
 
-.form__input.error {
-  box-shadow: 0 0 5px $accentText;
+.error {
+  box-shadow: 0 0 5px #db3138;
+  -webkit-box-shadow: 0 0 5px #db3138;
+  -moz-box-shadow: 0 0 5px #db3138;
 }
 
 .form__textarea {
@@ -61,7 +63,7 @@
   letter-spacing: 0.8px;
   text-transform: uppercase;
   color: $textColor;
-  background: #ffffff;
+  background: none;
   border: 1px solid #898989;
   resize: none;
 }

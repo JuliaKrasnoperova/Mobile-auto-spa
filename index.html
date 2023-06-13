@@ -225,12 +225,13 @@
             <form action="" id="form" class="form">
                 <fieldset class="form-group">
                     <div class="form-group-row">
-                        <input class=" input name form__input require" type="text" name="name" placeholder="NAME">
-                        <input class="input form__input require tel" type="tel" name="phone"
-                            placeholder="CELL PHONE NUMBER">
+                        <input class=" input name form__input" data-require="true" type="text" name="name"
+                            placeholder="NAME">
+                        <input class="input form__input tel" data-require="true" data-maxlength="12" type="tel"
+                            name="phone" placeholder="CELL PHONE NUMBER">
                     </div>
                     <div class="form-group-row">
-                        <textarea class="form__textarea input require" name="message"
+                        <textarea class="form__textarea" name="message"
                             placeholder="question about our services"></textarea>
                         <div class="socials">
                             <a href="https://instagram.com/mobile_auto_spa_bay_area?igshid=OGQ5ZDc2ODk2ZA=="
@@ -247,7 +248,7 @@
                         </div>
                     </div>
                     <div class="form-group-row">
-                        <button id="button" class="button form__button" type="submit">Send</button>
+                        <button id="button" class="button form__button popup__open" type="submit">Send</button>
                         <div class="form__extrainfo">
                             <div class="form__location">mountain view, california</div>
                             <a href="mailto:mobileautospa777@gmail.com"
@@ -269,6 +270,16 @@
             </ul>
         </div>
     </footer>
+
+    <div class="popup__bg">
+        <div class="popup">
+            <img src="./img/popup/icon-close.svg" alt="close" class="popup__close">
+            <img src="./img/popup/success.svg" class="popup__img" alt="success">
+            <h3 class="popup__header title-h3">Your request has been successfully submitted</h3>
+            <div class="popup__text">Thank you for contacting us.<br>will contact you as soon as it possible.<br>Have a
+                nice day!</div>
+        </div>
+    </div>
 
 
 
