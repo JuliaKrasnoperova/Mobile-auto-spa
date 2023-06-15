@@ -645,9 +645,9 @@ legend {
 }
 
 .error {
-  box-shadow: 0 0 5px #db3138;
-  -webkit-box-shadow: 0 0 5px #db3138;
-  -moz-box-shadow: 0 0 5px #db3138;
+  color: #db3138;
+  font-size: 16px;
+  font-family: sans-serif;
 }
 
 .form__textarea {
@@ -697,6 +697,10 @@ legend {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 10px;
+}
+
+.form-group-row__input {
+  width: 100%;
 }
 
 .form__extrainfo {
@@ -1012,7 +1016,7 @@ legend {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%) scale(0);
-          transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
   background-color: #fff;
   width: 550px;
   padding: 40px 20px;
@@ -1020,14 +1024,16 @@ legend {
   transition: 0.5s all;
   border: 1px solid #141414;
 }
+
 .popup__header {
   text-align: center;
   font-size: 45px;
   font-weight: 700;
   margin-bottom: 35px;
 }
+
 .popup__text {
-  font-family: 'ReformaGroteskMediumC';
+  font-family: "ReformaGroteskMediumC";
   font-style: normal;
   font-weight: 500;
   font-size: 35px;
@@ -1035,17 +1041,20 @@ legend {
   text-align: center;
   letter-spacing: 0.8px;
 }
+
 .popup__img {
   display: block;
   margin: 0 auto;
   margin-bottom: 15px;
 }
+
 .popup__active {
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
-  -webkit-transition: 0.5s all;
-  transition: 0.5s all;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
+
 .popup__close {
   position: absolute;
   top: -29px;
@@ -1059,11 +1068,12 @@ legend {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
   opacity: 0;
   pointer-events: none;
-  -webkit-transition: 0.5s all;
-  transition: 0.5s all;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   z-index: 99;
 }
 

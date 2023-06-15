@@ -41,14 +41,16 @@
   outline: none;
   border: 1px solid #db3138;
 }
+
 .form__input::placeholder {
   color: #898989;
 }
 
 .error {
-  box-shadow: 0 0 5px #db3138;
-  -webkit-box-shadow: 0 0 5px #db3138;
-  -moz-box-shadow: 0 0 5px #db3138;
+  color: #db3138;
+  font-size: 16px;
+  font-family: sans-serif;
+
 }
 
 .form__textarea {
@@ -67,9 +69,11 @@
   border: 1px solid #898989;
   resize: none;
 }
+
 .form__textarea::placeholder {
   color: #898989;
 }
+
 .form__textarea:focus {
   outline: none;
   border: 1px solid #db3138;
@@ -81,6 +85,11 @@
   justify-content: space-between;
   gap: 10px;
 }
+
+.form-group-row__input {
+  width: 100%;
+}
+
 .form__extrainfo {
   margin-top: 25px;
   display: flex;
@@ -88,6 +97,7 @@
   align-items: self-end;
   gap: 20px;
 }
+
 .form__extrainfo,
 .form__location {
   font-family: "ReformaGroteskDemiC";
@@ -98,6 +108,7 @@
   letter-spacing: 0.8px;
   text-transform: uppercase;
 }
+
 .form__location::before {
   display: block;
   content: "";
@@ -107,11 +118,13 @@
   width: 17px;
   height: 21px;
 }
+
 .form__location {
   display: flex;
   align-items: center;
   gap: 8px;
 }
+
 .form__email {
   display: flex;
   align-items: center;
@@ -134,6 +147,7 @@
   width: 21px;
   height: 17px;
 }
+
 .form__button {
   margin-top: 25px;
 }

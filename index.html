@@ -225,13 +225,18 @@
             <form action="" id="form" class="form">
                 <fieldset class="form-group">
                     <div class="form-group-row">
-                        <input class=" input name form__input" data-require="true" type="text" name="name"
-                            placeholder="NAME">
-                        <input class="input form__input tel" data-require="true" data-maxlength="12" type="tel"
-                            name="phone" placeholder="CELL PHONE NUMBER">
+                        <div class="form-group-row__input">
+                            <input class=" input name form__input" type="text" name="username" id="username"
+                                placeholder="NAME">
+                            <div class="error"></div>
+                        </div>
+                        <div class="form-group-row__input">
+                            <input class="input form__input tel" type="tel" id="tel" placeholder="CELL PHONE NUMBER">
+                            <div class="error"></div>
+                        </div>
                     </div>
                     <div class="form-group-row">
-                        <textarea class="form__textarea" name="message"
+                        <textarea id="password" class="form__textarea" name="message"
                             placeholder="question about our services"></textarea>
                         <div class="socials">
                             <a href="https://instagram.com/mobile_auto_spa_bay_area?igshid=OGQ5ZDc2ODk2ZA=="
@@ -248,7 +253,7 @@
                         </div>
                     </div>
                     <div class="form-group-row">
-                        <button id="button" class="button form__button popup__open" type="submit">Send</button>
+                        <button id="btn" class="button form__button  sign-up-btn" type="submit">Send</button>
                         <div class="form__extrainfo">
                             <div class="form__location">mountain view, california</div>
                             <a href="mailto:mobileautospa777@gmail.com"
