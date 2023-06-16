@@ -323,64 +323,74 @@ legend {
   padding-top: 40px;
 }
 
-.more__title {
-  margin-bottom: 35px;
-}
-
 .more__wrapper {
-  padding: 60px 60px;
-  border: 1px solid #898989;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.more__img {
-  width: 700px;
-  height: 700px;
-}
-
-.more__description {
-  -ms-flex-preferred-size: 400px;
-      flex-basis: 400px;
-}
-
-.more__list-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "ReformaGroteskMediumC";
+}
+
+.more__link {
+  text-decoration: none;
+  color: #db3138;
+  border: #141414;
+}
+
+.more__link {
+  cursor: pointer;
+}
+
+.more__link:hover .more__link-image img {
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+  opacity: 0.3;
+}
+
+.more__link-image {
+  position: relative;
+  width: 300px;
+  background: #141414;
+}
+
+.more__link-image img {
+  -webkit-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
+  border: #141414;
+}
+
+.more__link-text-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.more__link-text {
+  font-family: "ReformaGroteskDemiC";
   font-style: normal;
-  font-weight: 500;
-  font-size: 36px;
-  line-height: 1.2;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.4;
+  text-align: center;
   letter-spacing: 0.8px;
-  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #db3138;
 }
 
-.more__list-item:last-child {
-  margin-bottom: 0;
-}
-
-.more__list-item:before {
-  content: "";
-  width: 15px;
-  height: 15px;
-  display: block;
-  background-image: url(./../img/more/more-icon.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.more__list {
-  margin-bottom: 50px;
+.more__link:hover .more__link-text-wrapper {
+  opacity: 1;
 }
 
 .feedback {

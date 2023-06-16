@@ -3,54 +3,66 @@
   padding-top: 40px;
 }
 
-.more__title {
-  margin-bottom: 35px;
-}
-
 .more__wrapper {
-  padding: 60px 60px;
-  border: 1px solid #898989;
   display: flex;
-  //   gap: 50px;
-  justify-content: space-between;
-}
-.more__img {
-  width: 700px;
-  height: 700px;
-}
-.more__description {
-  flex-basis: 400px;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center
 }
 
-.more__list-item {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  font-family: "ReformaGroteskMediumC";
+.more__link {
+  text-decoration: none;
+  color: $accentText;
+  border: #141414;
+}
+
+.more__link {
+  cursor: pointer;
+}
+
+.more__link:hover .more__link-image img {
+  filter: blur(1px);
+  opacity: 0.3;
+
+}
+
+.more__link-image {
+  position: relative;
+  width: 300px;
+  background: #141414;
+}
+
+
+.more__link-image img {
+  transition: opacity 0.2s ease-in;
+  border: #141414;
+}
+
+
+.more__link-text-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.2s;
+}
+
+
+
+.more__link-text {
+  font-family: "ReformaGroteskDemiC";
   font-style: normal;
-  font-weight: 500;
-  font-size: 36px;
-  line-height: 1.2;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.4;
+  text-align: center;
   letter-spacing: 0.8px;
-  margin-bottom: 20px;
-}
-.more__list-item:last-child {
-  margin-bottom: 0;
+  text-transform: uppercase;
+  color: $accentText;
 }
 
-.more__list-item:before {
-  content: "";
-  width: 15px;
-  height: 15px;
-  display: block;
-  background-image: url(./../img/more/more-icon.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.more__list {
-  margin-bottom: 50px;
-}
-.more__button {
-}
-.button {
+.more__link:hover .more__link-text-wrapper {
+  opacity: 1;
 }
