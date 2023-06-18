@@ -19,17 +19,19 @@
 
 .more__link {
   cursor: pointer;
+  position: relative;
 }
 
 .more__link:hover .more__link-image img {
   filter: blur(1px);
   opacity: 0.3;
+  background-color: #141414;
 
 }
 
 .more__link-image {
   position: relative;
-  width: 300px;
+  width: 400px;
   background: #141414;
 }
 
@@ -45,24 +47,24 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: 0.2s;
+  opacity: 1;
 }
 
+
+.more__link:hover .more__button {
+  opacity: 1;
+
+}
 
 
 .more__link-text {
   font-family: "ReformaGroteskDemiC";
   font-style: normal;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 35px;
   line-height: 1.4;
   text-align: center;
   letter-spacing: 0.8px;
   text-transform: uppercase;
   color: $accentText;
-}
-
-.more__link:hover .more__link-text-wrapper {
-  opacity: 1;
 }

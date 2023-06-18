@@ -31,4 +31,6 @@
   text-align: justify;
 }
 
-.about__photo {}
+.about__photo img {
+  max-width: 500px;
+}

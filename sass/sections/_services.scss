@@ -3,13 +3,18 @@
   padding-top: 40px;
 }
 
+.services__content {
+  border: 1px solid #141414;
+  padding: 40px 20px;
+}
+
 .services__title {
   text-align: center;
   margin-bottom: 50px;
 }
 
 .services__description {
-  max-width: 526px;
+  max-width: 700px;
   margin: 0 auto;
   text-align: center;
   font-family: "ReformaGroteskMediumC";
@@ -17,7 +22,51 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 1.2;
-  text-align: center;
   letter-spacing: 0.8px;
   margin-bottom: 50px;
+
+  &_red {
+    color: $accentText;
+    text-align: left;
+  }
+}
+
+.servises__prices-description {
+  font-family: "ReformaGroteskDemiC";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: center;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+
+  &_red {
+    color: $accentText;
+
+  }
+
+}
+
+.services__list {
+  list-style: circle;
+  text-align: left;
+}
+
+.services__prices {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.servises__prices-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.servises__prices-item img {
+  width: 90px;
+  height: 90px;
 }
