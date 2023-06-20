@@ -6,56 +6,6 @@ window.onload = function () {
 };
 
 window.addEventListener("DOMContentLoaded", () => {
-  // form Validation
-  const modal = document.querySelector(".popup");
-  const overlay = document.querySelector(".popup__bg");
-  const modalClose = document.querySelector(".popup__close");
-  const body = document.querySelector("body");
-
-  const openModal = () => {
-    overlay.classList.add("active");
-    modal.classList.add("popup__active");
-    body.classList.add("_locked");
-  };
-
-  // targets all the classes and id from the HTML
-  const id = (id) => document.getElementById(id);
-  const classes = (classes) => document.getElementsByClassName(classes);
-
-  // stores classes and id's in variables
-  const userName = id("username");
-  const email = id("tel");
-  const form = id("form");
-  const errorMsg = classes("error");
-
-  // targets form submit button
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    engine(userName, 0, "Username cannot be blank");
-    engine(tel, 1, "Please enter a valid cell phone number");
-
-    if (userName.value.trim() !== "" && email.value.trim() !== "") {
-      openModal();
-      modalClose.addEventListener("click", () => {
-        overlay.classList.remove("active");
-        modal.classList.remove("popup__active");
-        body.classList.remove("_locked");
-      });
-      form.reset();
-    }
-  });
-
-  const engine = (id, serial, message) => {
-    if (id.value.trim() === "") {
-      errorMsg[serial].innerHTML = message;
-      id.style.border = "2px solid red";
-    } else {
-      errorMsg[serial].innerHTML = "";
-      id.style.border = "2px solid green";
-    }
-  };
-
   // Tabs
   const tabs = document.querySelectorAll(".tabs__item");
   const tabsContent = document.querySelectorAll(".tabs__content");

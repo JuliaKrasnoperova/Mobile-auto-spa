@@ -427,22 +427,20 @@
                     <rect x="132.213" y="8" width="10" height="10" transform="rotate(-45 132.213 8)" fill="#DB3138" />
                 </svg>
             </span>
-            <form action="" id="form" class="form">
+            <form action="mail.php" method="POST" id="form" class="form">
                 <fieldset class="form-group">
                     <div class="form-group-row">
                         <div class="form-group-row__input">
-                            <input class=" input name form__input" type="text" name="username" id="username"
-                                placeholder="NAME">
-                            <div class="error"></div>
+                            <input class=" name form__input" type="text" name="FIO" placeholder="NAME" required>
                         </div>
                         <div class="form-group-row__input">
-                            <input class="input form__input tel" type="tel" id="tel" placeholder="CELL PHONE NUMBER">
-                            <div class="error"></div>
+                            <input class=" form__input" type="tel" name="PHONE" placeholder="CELL PHONE NUMBER"
+                                required>
                         </div>
                     </div>
                     <div class="form-group-row">
-                        <textarea id="password" class="form__textarea" name="message"
-                            placeholder="question about our services"></textarea>
+                        <textarea class="form__textarea" name="TEXT" placeholder="question about our services"
+                            required></textarea>
                         <div class="socials">
                             <a href="https://instagram.com/mobile_auto_spa_bay_area?igshid=OGQ5ZDc2ODk2ZA=="
                                 class="socials__link">
@@ -458,7 +456,7 @@
                         </div>
                     </div>
                     <div class="form-group-row">
-                        <button id="btn" class="button form__button  sign-up-btn" type="submit">Send</button>
+                        <button class="button form__button" name="submit" type="submit">Send</button>
                         <div class="form__extrainfo">
                             <div class="form__location">mountain view, california</div>
                             <a href="mailto:mobileautospa777@gmail.com"
@@ -478,22 +476,13 @@
             </ul>
         </div>
     </footer>
-    <div class="popup__bg">
-        <div class="popup">
-            <img src="./img/popup/icon-close.svg" alt="close" class="popup__close">
-            <img src="./img/popup/success.svg" class="popup__img" alt="success">
-            <h3 class="popup__header title-h3">Your request has been successfully submitted</h3>
-            <div class="popup__text">Thank you for contacting us.<br>will contact you as soon as it possible.<br>Have a
-                nice day!</div>
-        </div>
-    </div>
 
 
 
 
 
 
-    <script src="./libs/inputmask.min.js" defer></script>
+
     <script src="./index.js" defer></script>
 </body>
 
