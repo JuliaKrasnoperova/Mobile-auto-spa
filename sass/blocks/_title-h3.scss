@@ -11,4 +11,8 @@
   @include tablet {
     font-size: 25px;
   }
+
+  @include mobile {
+    font-size: 14px;
+  }
 }

@@ -15,6 +15,10 @@
   @include tablet {
     font-size: 85px;
   }
+
+  @include mobile {
+    font-size: 50px;
+  }
 }
 
 .title--white {

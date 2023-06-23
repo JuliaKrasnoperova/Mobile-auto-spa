@@ -12,3 +12,9 @@
     margin-bottom: 20px;
   }
 }
+
+.page-decoration svg {
+  @include mobile {
+    width: 100px;
+  }
+}

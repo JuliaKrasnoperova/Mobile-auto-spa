@@ -28,6 +28,11 @@
   background: #ffffff;
   border: 1px solid #898989;
   width: 100%;
+
+  @include mobile {
+    font-size: 12px;
+    height: 40px;
+  }
 }
 
 .form__input:focus {
@@ -63,10 +68,10 @@
   border: 1px solid #898989;
   resize: none;
 
-
-  // @include tablet {
-  //   width: 100%;
-  // }
+  @include mobile {
+    font-size: 12px;
+    height: 141px;
+  }
 
 }
 
@@ -126,6 +131,10 @@
     font-size: 15px;
     gap: 10px;
   }
+
+  @include mobile {
+    font-size: 11px;
+  }
 }
 
 .form__location::before {
@@ -136,6 +145,11 @@
   background-size: cover;
   width: 17px;
   height: 21px;
+
+  @include mobile {
+    width: 13px;
+    height: 16px;
+  }
 }
 
 .form__location {
@@ -151,6 +165,7 @@
   text-decoration: none;
   color: $textColor;
   transition: 0.2s;
+
 }
 
 .form__tel {
@@ -175,6 +190,11 @@
   background-size: cover;
   width: 21px;
   height: 17px;
+
+  @include mobile {
+    width: 13px;
+    height: 10px;
+  }
 }
 
 .form__tel::before {
@@ -185,10 +205,19 @@
   background-size: cover;
   width: 21px;
   height: 21px;
+
+  @include mobile {
+    width: 13px;
+    height: 13px;
+  }
 }
 
 .form__button {
   margin-top: 25px;
+
+  @include mobile-400 {
+    align-self: flex-end;
+  }
 }
 
 .form__socials {
@@ -196,4 +225,19 @@
   flex-direction: column;
   align-items: center;
   gap: 15px;
+}
+
+.form__socials img {
+  @include mobile {
+    width: 37px;
+    height: 25px;
+  }
+}
+
+.form-group-row:nth-child(3) {
+
+  @include mobile-400 {
+    flex-direction: column-reverse;
+  }
+
 }

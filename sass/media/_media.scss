@@ -3,6 +3,7 @@ $laptop: 1024px;
 $tablet-930: 930px;
 $tablet: 700px;
 $mobile: 540px;
+$mobile-400: 400px;
 
 @mixin laptop-1300 {
     @media (max-width: #{$laptop-1300}) {
@@ -32,6 +33,12 @@ $mobile: 540px;
 
 @mixin mobile {
     @media (max-width: #{$mobile}) {
+        @content;
+    }
+}
+
+@mixin mobile-400 {
+    @media (max-width: #{$mobile-400}) {
         @content;
     }
 }
