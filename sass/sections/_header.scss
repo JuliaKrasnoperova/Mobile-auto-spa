@@ -1,42 +1,91 @@
+@import'../media/media';
+
+
 .header {
   margin: 0 auto;
   width: 100%;
-  height: 1024px;
+  height: 1028px;
   position: relative;
   z-index: 99;
   background-image: url(./../img/header/header-banner-desktop.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  @include laptop {
+    background-image: url(./../img/header/home/header-1024.jpg);
+    height: auto;
+  }
+
+  @include tablet {
+    background-image: url(./../img/header/home/header-768.jpg);
+    height: auto;
+  }
 }
 
 .header__services {
   margin: 0 auto;
   width: 100%;
-  height: 1024px;
+  height: 1019px;
   position: relative;
   z-index: 99;
   background-image: url(./../img/header/header-services.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  @include laptop {
+    background-image: url(./../img/header/services-page/header-1024.jpg);
+    height: auto;
+  }
+
+  @include tablet {
+    background-image: url(./../img/header/services-page/header-768.jpg);
+    height: auto;
+  }
 }
 
 .header__additional {
   margin: 0 auto;
   width: 100%;
-  height: 1016px;
+  height: 1019px;
   position: relative;
   z-index: 99;
   background-image: url(./../img/header/header-additional-services.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  @include laptop {
+    background-image: url(./../img/header/additional/header-1024.jpg);
+    height: auto;
+  }
+
+  @include tablet {
+    background-image: url(./../img/header/additional/header-768.jpg);
+    height: auto;
+  }
 }
 
 .header__nav {
   margin-top: 40px;
   margin-left: 200px;
+
+  @include laptop-1300 {
+    margin-left: 100px;
+  }
+
+  @include laptop-1300 {
+    margin-left: 40px;
+  }
+
+  @include tablet {
+    display: flex;
+    justify-content: end;
+    margin: 40px 40px 0 40px;
+
+  }
+
 }
 
 .header:before {
@@ -47,13 +96,15 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(0deg,
-      rgba(255, 255, 255, 0.51),
-      rgba(255, 255, 255, 0.51));
+  background: linear-gradient(0deg, rgba(20, 20, 20, 0.8), rgba(20, 20, 20, 0.8));
 }
 
 .header__title {
   margin-top: 140px;
+
+  @include tablet {
+    margin-top: 50px;
+  }
 }
 
 .header__description {
@@ -62,10 +113,23 @@
   font-size: 40px;
   line-height: 1.2;
   text-align: center;
+  color: $whiteText;
+
+  @include laptop {
+    font-size: 35px;
+  }
+
+  @include tablet-930 {
+    font-size: 28px;
+  }
 }
 
 .header__description-services {
   margin-bottom: 240px;
+
+  @include laptop {
+    margin-bottom: 100px;
+  }
 }
 
 .header__button {
@@ -73,33 +137,47 @@
   max-width: 170px;
   margin: 0 auto;
   margin-top: 88px;
-  margin-bottom: 100px;
+
+  @include tablet {
+    margin-top: 50px;
+  }
 }
 
 .header__info {
+  margin-top: 100px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
 }
 
 .header__item {
-  border-top: 1px solid #141414;
-  border-bottom: 1px solid #141414;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
   padding-top: 42px;
   padding-bottom: 45px;
+
+  @include tablet-930 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  @include tablet {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 }
 
 .header__item:nth-child(1) {
-  border-left: 1px solid #141414;
-  border-right: 1px solid #141414;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
 }
 
 .header__item:nth-child(2) {
-  border-right: 1px solid #141414;
+  border-right: 1px solid #fff;
 }
 
 .header__item:nth-child(2) {
-  border-right: 1px solid #141414;
+  border-right: 1px solid #fff;
 }
 
 .header__item-name {
@@ -113,6 +191,11 @@
   text-align: center;
   letter-spacing: 0.8px;
   text-transform: uppercase;
+  color: $whiteText;
+
+  @include tablet {
+    font-size: 16px;
+  }
 }
 
 .header__item-description {
@@ -128,6 +211,19 @@
   text-transform: uppercase;
   color: $accentText;
   margin-bottom: 15px;
+
+  @include laptop {
+    font-size: 20px;
+  }
+
+  @include tablet-930 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  @include tablet {
+    font-size: 16px;
+  }
 }
 
 .header__item-description:last-child {

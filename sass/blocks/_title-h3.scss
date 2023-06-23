@@ -7,4 +7,8 @@
   letter-spacing: 0.8px;
   text-transform: uppercase;
   color: $accentText;
+
+  @include tablet {
+    font-size: 25px;
+  }
 }

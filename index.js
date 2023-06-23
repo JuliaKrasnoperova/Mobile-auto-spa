@@ -76,4 +76,28 @@ window.addEventListener("DOMContentLoaded", () => {
       content.style.height = content.scrollHeight + 10 + "px";
     }
   }
+
+  // Burger Menu
+  const navIcon = document.querySelector(".nav__icon");
+  const nav = document.querySelector(".nav__mobile");
+  const body = document.querySelector("body");
+  const navBg = document.querySelector(".nav__mobile-bg");
+
+  navIcon.addEventListener("click", function () {
+    this.classList.toggle("nav__icon--active");
+    nav.classList.toggle("active");
+    navBg.classList.toggle("show");
+    body.classList.toggle("_locked");
+  });
+
+  const navLink = document.querySelectorAll(".nav__link");
+
+  navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+  function closeMenu() {
+    navIcon.classList.remove("nav__icon--active");
+    nav.classList.remove("active");
+    navBg.classList.remove("show");
+    body.classList.remove("_locked");
+  }
 });

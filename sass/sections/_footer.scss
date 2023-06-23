@@ -4,7 +4,19 @@
   padding-top: 70px;
   padding-bottom: 70px;
 }
+
+
+
 .footer__nav-list {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+
+  @include tablet {
+    font-size: 25px;
+  }
+}
+
+.footer__link {
+  color: $textColor;
 }

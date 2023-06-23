@@ -1,3 +1,16 @@
+.accordion {
+    max-width: 600px;
+
+    @include laptop {
+        width: 100%;
+    }
+
+    @include tablet {
+        width: 77%;
+    }
+
+}
+
 .accordion__content {
     display: flex;
     flex-direction: column;
@@ -8,6 +21,12 @@
     display: flex;
     justify-content: space-between;
     cursor: pointer;
+}
+
+.accordion__header img {
+    @include tablet {
+        width: 40px;
+    }
 }
 
 .accordion__header div {

@@ -1,0 +1,37 @@
+$laptop-1300: 1300px;
+$laptop: 1024px;
+$tablet-930: 930px;
+$tablet: 700px;
+$mobile: 540px;
+
+@mixin laptop-1300 {
+    @media (max-width: #{$laptop-1300}) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (max-width: #{$laptop}) {
+        @content;
+    }
+}
+
+@mixin tablet-930 {
+    @media (max-width: #{$tablet-930}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+
+
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
+}

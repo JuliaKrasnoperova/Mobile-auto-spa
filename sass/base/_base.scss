@@ -1,3 +1,5 @@
+@import '../media/media';
+
 /* Reset and base styles  */
 *,
 *::before,
@@ -20,7 +22,6 @@ body {
   /* sticky footer */
   margin: 0;
   font-family: "ReformaGroteskMediumC", sans-serif;
-  color: $textColor;
 
   &._locked {
     overflow: hidden;
@@ -82,11 +83,32 @@ legend {
 /* Grid styles */
 
 .container {
-  width: 1430px;
+  width: 1230px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+
+  @include laptop-1300 {
+    max-width: 930px;
+    margin: 0 auto;
+  }
+
+  @include tablet-930 {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  @include tablet {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  @include mobile {
+    width: 100%;
+    margin: 0 auto;
+  }
+
 }
 
 /* Utility */

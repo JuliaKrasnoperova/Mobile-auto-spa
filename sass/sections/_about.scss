@@ -1,6 +1,12 @@
 .about {
   padding-top: 40px;
   margin-top: 40px;
+
+  @include tablet {
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+
 }
 
 .about__title {
@@ -11,6 +17,11 @@
   display: flex;
   gap: 60px;
   justify-content: center;
+
+  @include laptop-1300 {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 }
 
 .about__item-header {
@@ -29,6 +40,14 @@
   letter-spacing: 0.48px;
   max-width: 700px;
   text-align: justify;
+
+  @include tablet-930 {
+    font-size: 28px;
+  }
+
+  @include tablet {
+    font-size: 23px;
+  }
 }
 
 .about__photo img {

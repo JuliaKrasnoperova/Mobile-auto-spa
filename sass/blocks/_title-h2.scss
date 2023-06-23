@@ -7,4 +7,12 @@
   text-align: center;
   letter-spacing: 0.8px;
   text-transform: uppercase;
+
+  @include tablet-930 {
+    font-size: 45px;
+  }
+
+  @include tablet {
+    font-size: 40px;
+  }
 }

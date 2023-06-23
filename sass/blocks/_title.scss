@@ -7,6 +7,14 @@
   color: $accentText;
   text-align: center;
   text-transform: uppercase;
+
+  @include laptop {
+    font-size: 100px;
+  }
+
+  @include tablet {
+    font-size: 85px;
+  }
 }
 
 .title--white {
