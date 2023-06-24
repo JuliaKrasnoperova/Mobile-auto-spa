@@ -83,21 +83,87 @@ window.addEventListener("DOMContentLoaded", () => {
   const body = document.querySelector("body");
   const navBg = document.querySelector(".nav__mobile-bg");
 
-  navIcon.addEventListener("click", function () {
+  navIcon.addEventListener("click", openMenu);
+
+  const navLink = document.querySelectorAll(".nav__link");
+  navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+  function openMenu() {
     this.classList.toggle("nav__icon--active");
     nav.classList.toggle("active");
     navBg.classList.toggle("show");
     body.classList.toggle("_locked");
-  });
-
-  const navLink = document.querySelectorAll(".nav__link");
-
-  navLink.forEach((n) => n.addEventListener("click", closeMenu));
-
+  }
   function closeMenu() {
     navIcon.classList.remove("nav__icon--active");
     nav.classList.remove("active");
     navBg.classList.remove("show");
     body.classList.remove("_locked");
   }
+
+  // Slider
+  const sliderImages = document.querySelectorAll(".slider__item");
+  const sliderLine = document.querySelector(".slider__line");
+  const sliderDots = document.querySelectorAll(".slider__dot");
+  const sliderBtnNext = document.querySelector(".slider__arrow-next");
+  const sliderBtnPrev = document.querySelector(".slider__arrow-prev");
+
+  let sliderCount = 0;
+  let sliderWidth;
+
+  // Адаптивность слайдера
+  window.addEventListener("resize", showSlide);
+
+  // Кнопки слайдов вперед и назад
+  sliderBtnNext.addEventListener("click", nextSlide);
+  sliderBtnPrev.addEventListener("click", prevSlide);
+
+  function showSlide() {
+    sliderWidth = document.querySelector(".slider__wrapper").offsetWidth;
+    sliderLine.style.width = sliderWidth * sliderImages.length + "px";
+    sliderImages.forEach((item) => (item.style.width = sliderWidth + "px"));
+
+    rollSlider();
+  }
+
+  showSlide();
+
+  // Перелистывает слад вперед
+  function nextSlide() {
+    sliderCount++;
+    if (sliderCount >= sliderImages.length) sliderCount = 0;
+
+    rollSlider();
+    thisSlide(sliderCount);
+  }
+
+  // Перелистывает слад назад
+  function prevSlide() {
+    sliderCount--;
+    if (sliderCount < 0) sliderCount = sliderImages.length - 1;
+
+    rollSlider();
+    thisSlide(sliderCount);
+  }
+
+  // Задает шаг перемещения сладов
+  function rollSlider() {
+    sliderLine.style.transform = `translateX(${-sliderCount * sliderWidth}px)`;
+  }
+
+  // Указывает какой слайд по счету активен
+
+  function thisSlide(index) {
+    sliderDots.forEach((item) => item.classList.remove("slider__dot-active"));
+    sliderDots[index].classList.add("slider__dot-active");
+  }
+
+  // Вешаем клик на dot
+  sliderDots.forEach(function (dot, index) {
+    dot.addEventListener("click", function () {
+      sliderCount = index;
+      rollSlider();
+      thisSlide(sliderCount);
+    });
+  });
 });

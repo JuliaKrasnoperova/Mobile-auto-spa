@@ -11,12 +11,20 @@
 
 .services__content {
   border: 1px solid #141414;
-  padding: 40px 20px;
+  padding: 40px 60px;
+
+  @include mobile {
+    padding: 20px;
+  }
 }
 
 .services__title {
   text-align: center;
   margin-bottom: 50px;
+
+  @include tablet {
+    margin-bottom: 25px;
+  }
 }
 
 .services__description {
@@ -35,6 +43,25 @@
     color: $accentText;
     text-align: left;
   }
+
+  @include tablet-930 {
+    font-size: 23px;
+    width: 100%;
+  }
+
+  @include tablet {
+    font-size: 20px;
+  }
+
+  @include mobile {
+    font-size: 17px;
+    margin-bottom: 30px;
+  }
+
+  @include mobile-400 {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
 }
 
 .servises__prices-description {
@@ -50,6 +77,14 @@
   &_red {
     color: $accentText;
 
+  }
+
+  @include tablet-930 {
+    font-size: 20px;
+  }
+
+  @include mobile {
+    font-size: 14px;
   }
 
 }
@@ -74,12 +109,38 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  @include mobile {
+    width: 10px;
+    height: 10px;
+  }
+
+  @include mobile-400 {
+    width: 6px;
+    height: 6px;
+  }
+
 }
 
 .services__prices {
   display: flex;
   justify-content: center;
   gap: 30px;
+
+  @include mobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mobile-400 {
+    gap: 10px;
+  }
+
+  &_add {
+    @include mobile {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 }
 
 .servises__prices-item {
@@ -92,4 +153,8 @@
 .servises__prices-item img {
   width: 90px;
   height: 90px;
+
+  @include tablet {
+    width: 68px;
+  }
 }

@@ -11,4 +11,20 @@
   &_red {
     color: $accentText;
   }
+
+  @include tablet-930 {
+    font-size: 26px;
+  }
+
+  @include tablet {
+    font-size: 25px;
+  }
+
+  @include mobile {
+    font-size: 18px;
+  }
+
+  @include mobile-400 {
+    font-size: 14px;
+  }
 }

@@ -19,4 +19,8 @@
   @include mobile {
     font-size: 35px;
   }
+
+  @include mobile-400 {
+    font-size: 30px;
+  }
 }

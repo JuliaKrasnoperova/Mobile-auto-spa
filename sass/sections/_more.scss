@@ -50,6 +50,10 @@
   @include tablet {
     width: 200px;
   }
+
+  @include mobile-400 {
+    width: 150px;
+  }
 }
 
 
@@ -95,5 +99,9 @@
 
   @include mobile {
     font-size: 20px;
+  }
+
+  @include mobile-400 {
+    font-size: 14px;
   }
 }
