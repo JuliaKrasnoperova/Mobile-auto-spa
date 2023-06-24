@@ -140,7 +140,6 @@ legend {
 .header {
   margin: 0 auto;
   width: 100%;
-  height: 1028px;
   position: relative;
   z-index: 99;
   background-image: url(./../img/header/header-banner-desktop.jpg);
@@ -164,7 +163,6 @@ legend {
 .header__services {
   margin: 0 auto;
   width: 100%;
-  height: 1019px;
   position: relative;
   z-index: 99;
   background-image: url(./../img/header/header-services.jpg);
@@ -188,7 +186,6 @@ legend {
 .header__additional {
   margin: 0 auto;
   width: 100%;
-  height: 1019px;
   position: relative;
   z-index: 99;
   background-image: url(./../img/header/header-additional-services.png);
@@ -212,7 +209,6 @@ legend {
 .header__gallery {
   margin: 0 auto;
   width: 100%;
-  height: 1019px;
   position: relative;
   z-index: 99;
   background-image: url(./../img/header/header-gallery.jpg);
@@ -298,7 +294,7 @@ legend {
 }
 
 .header__description-services {
-  margin-bottom: 240px;
+  margin-bottom: 200px;
 }
 @media (max-width: 1024px) {
   .header__description-services {
@@ -616,6 +612,7 @@ legend {
     top: -100%;
     left: 0;
     width: 100%;
+    height: 100%;
     -webkit-transform: none;
             transform: none;
   }
@@ -1219,6 +1216,93 @@ legend {
   }
 }
 
+.video {
+  margin-top: 40px;
+  padding-top: 40px;
+}
+@media (max-width: 700px) {
+  .video {
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+}
+
+.video__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+}
+
+.video__content {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  background: grey url("./../img/video/youtube.png") no-repeat center;
+  background-size: 10%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.video__content:hover {
+  cursor: pointer;
+  background-size: 12%;
+}
+
+.video__content iframe {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.social-network {
+  margin-top: 40px;
+  padding-top: 40px;
+}
+@media (max-width: 700px) {
+  .social-network {
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+}
+
+.social-network__socials {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 40px;
+}
+
+.social-network__socials img {
+  width: 100px;
+  height: 100px;
+}
+@media (max-width: 930px) {
+  .social-network__socials img {
+    width: 70px;
+    height: 70px;
+  }
+}
+@media (max-width: 700px) {
+  .social-network__socials img {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (max-width: 540px) {
+  .social-network__socials img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
 .title {
   font-family: "ReformaGroteskBoldC";
   font-style: normal;
@@ -1757,6 +1841,12 @@ legend {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
+}
+
+.socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .socials__link {
