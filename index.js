@@ -97,11 +97,11 @@ window.addEventListener("DOMContentLoaded", () => {
     html.classList.toggle("_locked");
   }
   function closeMenu() {
-    navIcon.classList.toggle("nav__icon--active");
-    nav.classList.toggle("active");
-    navBg.classList.toggle("show");
-    body.classList.toggle("_locked");
-    html.classList.toggle("_locked");
+    navIcon.classList.remove("nav__icon--active");
+    nav.classList.remove("active");
+    navBg.classList.remove("show");
+    body.classList.remove("_locked");
+    html.classList.remove("_locked");
   }
 
   // Slider
