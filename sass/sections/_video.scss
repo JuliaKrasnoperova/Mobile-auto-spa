@@ -20,14 +20,14 @@
     position: relative;
     width: 100%;
     padding-top: 56.25%;
-    background: grey url('./../img/video/youtube.png') no-repeat center;
-    background-size: 10%;
-    transition: 0.2s;
+    background: grey url('./../img/video/youtube.jpg') no-repeat center;
+    background-size: 100%;
+
 }
 
 .video__content:hover {
     cursor: pointer;
-    background-size: 12%;
+
 }
 
 .video__content iframe {

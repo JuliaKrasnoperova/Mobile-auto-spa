@@ -81,6 +81,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const navIcon = document.querySelector(".nav__icon");
   const nav = document.querySelector(".nav__mobile");
   const body = document.querySelector("body");
+  const html = document.querySelector("html");
   const navBg = document.querySelector(".nav__mobile-bg");
 
   navIcon.addEventListener("click", openMenu);
@@ -93,12 +94,14 @@ window.addEventListener("DOMContentLoaded", () => {
     nav.classList.toggle("active");
     navBg.classList.toggle("show");
     body.classList.toggle("_locked");
+    html.classList.toggle("_locked");
   }
   function closeMenu() {
     navIcon.classList.toggle("nav__icon--active");
     nav.classList.toggle("active");
     navBg.classList.toggle("show");
     body.classList.toggle("_locked");
+    html.classList.toggle("_locked");
   }
 
   // Slider
