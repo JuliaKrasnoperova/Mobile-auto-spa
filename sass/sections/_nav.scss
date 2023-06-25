@@ -9,6 +9,7 @@
   gap: 50px;
 
 
+
   @include laptop {
     font-size: 30px;
     gap: 35px;
@@ -32,6 +33,7 @@
     }
   }
 }
+
 
 .nav__list_black a {
   color: $textColor;

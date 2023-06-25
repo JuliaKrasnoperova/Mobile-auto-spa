@@ -110,68 +110,72 @@ window.addEventListener("DOMContentLoaded", () => {
   const sliderDots = document.querySelectorAll(".slider__dot");
   const sliderBtnNext = document.querySelector(".slider__arrow-next");
   const sliderBtnPrev = document.querySelector(".slider__arrow-prev");
+  const sliderContainer = document.querySelector(".slider__container");
 
-  let sliderCount = 0;
-  let sliderWidth;
+  if (document.contains(sliderContainer)) {
+    let sliderCount = 0;
+    let sliderWidth;
 
-  // Адаптивность слайдера
-  window.addEventListener("resize", showSlide);
+    // Адаптивность слайдера
+    window.addEventListener("resize", showSlide);
 
-  // Кнопки слайдов вперед и назад
-  sliderBtnNext.addEventListener("click", nextSlide);
-  sliderBtnPrev.addEventListener("click", prevSlide);
+    // Кнопки слайдов вперед и назад
+    sliderBtnNext.addEventListener("click", nextSlide);
+    sliderBtnPrev.addEventListener("click", prevSlide);
 
-  function showSlide() {
-    sliderWidth = document.querySelector(".slider__wrapper").offsetWidth;
-    sliderLine.style.width = sliderWidth * sliderImages.length + "px";
-    sliderImages.forEach((item) => (item.style.width = sliderWidth + "px"));
+    function showSlide() {
+      sliderWidth = document.querySelector(".slider__wrapper").offsetWidth;
+      sliderLine.style.width = sliderWidth * sliderImages.length + "px";
+      sliderImages.forEach((item) => (item.style.width = sliderWidth + "px"));
 
-    rollSlider();
-  }
+      rollSlider();
+    }
 
-  showSlide();
+    showSlide();
 
-  // Перелистывает слад вперед
-  function nextSlide() {
-    sliderCount++;
-    if (sliderCount >= sliderImages.length) sliderCount = 0;
+    // Перелистывает слад вперед
+    function nextSlide() {
+      sliderCount++;
+      if (sliderCount >= sliderImages.length) sliderCount = 0;
 
-    rollSlider();
-    thisSlide(sliderCount);
-  }
-
-  // Перелистывает слад назад
-  function prevSlide() {
-    sliderCount--;
-    if (sliderCount < 0) sliderCount = sliderImages.length - 1;
-
-    rollSlider();
-    thisSlide(sliderCount);
-  }
-
-  // Задает шаг перемещения сладов
-  function rollSlider() {
-    sliderLine.style.transform = `translateX(${-sliderCount * sliderWidth}px)`;
-  }
-
-  // Указывает какой слайд по счету активен
-
-  function thisSlide(index) {
-    sliderDots.forEach((item) => item.classList.remove("slider__dot-active"));
-    sliderDots[index].classList.add("slider__dot-active");
-  }
-
-  // Вешаем клик на dot
-  sliderDots.forEach(function (dot, index) {
-    dot.addEventListener("click", function () {
-      sliderCount = index;
       rollSlider();
       thisSlide(sliderCount);
+    }
+
+    // Перелистывает слад назад
+    function prevSlide() {
+      sliderCount--;
+      if (sliderCount < 0) sliderCount = sliderImages.length - 1;
+
+      rollSlider();
+      thisSlide(sliderCount);
+    }
+
+    // Задает шаг перемещения сладов
+    function rollSlider() {
+      sliderLine.style.transform = `translateX(${
+        -sliderCount * sliderWidth
+      }px)`;
+    }
+
+    // Указывает какой слайд по счету активен
+
+    function thisSlide(index) {
+      sliderDots.forEach((item) => item.classList.remove("slider__dot-active"));
+      sliderDots[index].classList.add("slider__dot-active");
+    }
+
+    // Вешаем клик на dot
+    sliderDots.forEach(function (dot, index) {
+      dot.addEventListener("click", function () {
+        sliderCount = index;
+        rollSlider();
+        thisSlide(sliderCount);
+      });
     });
-  });
+  }
 
   // Video
-
   const links = document.querySelectorAll("#video");
 
   links.forEach(function (video) {
