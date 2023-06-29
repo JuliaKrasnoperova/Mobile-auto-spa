@@ -14,6 +14,7 @@
     <meta name="keywords" content="car detailing, auto spa, car wash, interior detailing, exterior detailing, upholstery cleaning, ceramic coating, Mountain View, Palo Alto, San Jose, San Francisco, Los Altos Hills, Sunnyvale, Cupertino, Santa Clara, Redwood City, Menlo Park, Fremont, Oakland, Berkeley, Hayward, Milpitas, Pleasanton, San Mateo, Bay Area
         ">
     <!-- Styles -->
+    <link rel="stylesheet" href="./css/cdn-swiper.css">
     <link rel="stylesheet" href="./css/main.css">
 
     <!-- Open Graph -->
@@ -73,7 +74,7 @@
             </div>
         </div>
     </div>
-    <header class="header header__gallery">
+    <header id="headerTop" class="header header__gallery">
         <div class="nav__mobile-bg">
             <div class="nav__mobile">
                 <ul class="nav__mobile-list">
@@ -156,40 +157,37 @@
                 </svg>
             </span>
         </div>
+        <div class="swiper__container">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./img/carousel/01.jpg" alt="before/after"></div>
+                    <div class="swiper-slide"><img src="./img/carousel/02.jpg" alt="before/after"></div>
+                    <div class="swiper-slide"><img src="./img/carousel/03.jpg" alt="before/after"></div>
+                    <div class="swiper-slide"><img src="./img/carousel/04.jpg" alt="before/after"></div>
+                    <div class="swiper-slide"><img src="./img/carousel/05.jpg" alt="before/after"></div>
+                    <div class="swiper-slide"><img src="./img/carousel/06.jpg" alt="before/after"></div>
+                    <div class="swiper-slide"><img src="./img/carousel/07.jpg" alt="before/after"></div>
+                    <div class="swiper-slide"><img src="./img/carousel/08.jpg" alt="before/after"></div>
+                    <div class="swiper-slide"><img src="./img/carousel/09.jpg" alt="before/after"></div>
+                    <div class="swiper-slide"><img src="./img/carousel/10.jpg" alt="before/after"></div>
+                    <div class="swiper-slide"><img src="./img/carousel/11.jpg" alt="before/after"></div>
+                    <div class="swiper-slide"><img src="./img/carousel/12.jpg" alt="before/after"></div>
+                    <div class="swiper-slide"><img src="./img/carousel/13.jpg" alt="before/after"></div>
+                    <div class="swiper-slide"><img src="./img/carousel/14.jpg" alt="before/after"></div>
+                    <div class="swiper-slide"><img src="./img/carousel/15.jpg" alt="before/after"></div>
 
-        <div class="slider__container">
-            <div class="slider__wrapper">
-                <div class="slider__line">
-                    <div class="slider__item"> <img src="./img/carousel/01.jpg" alt="before/after"></div>
-                    <div class="slider__item"> <img src="./img/carousel/02.jpg" alt="before/after"></div>
-                    <div class="slider__item"> <img src="./img/carousel/03.jpg" alt="before/after"></div>
-                    <div class="slider__item"> <img src="./img/carousel/04.jpg" alt="before/after"></div>
-                    <div class="slider__item"> <img src="./img/carousel/05.jpg" alt="before/after"></div>
-                    <div class="slider__item"> <img src="./img/carousel/06.jpg" alt="before/after"></div>
-                    <div class="slider__item"> <img src="./img/carousel/07.jpg" alt="before/after"></div>
-                    <div class="slider__item"> <img src="./img/carousel/08.jpg" alt="before/after"></div>
-                    <div class="slider__item"> <img src="./img/carousel/09.jpg" alt="before/after"></div>
-                    <div class="slider__item"> <img src="./img/carousel/10.jpg" alt="before/after"></div>
                 </div>
-                <button class="slider__arrow slider__arrow-prev"> <img src="./img/slider/arrow-left.svg"
-                        alt="button"></button>
-                <button class="slider__arrow slider__arrow-next"> <img src="./img/slider/arrow-right.svg"
-                        alt="button"></button>
             </div>
-            <div class="slider__pagination">
-                <div class="slider__dot slider__dot-active"></div>
-                <div class="slider__dot"></div>
-                <div class="slider__dot"></div>
-                <div class="slider__dot"></div>
-                <div class="slider__dot"></div>
-                <div class="slider__dot"></div>
-                <div class="slider__dot"></div>
-                <div class="slider__dot"></div>
-                <div class="slider__dot"></div>
-                <div class="slider__dot"></div>
+            <div class="swiper-arrow swiper-button-prev">
+                <img src="./img/slider/arrow-left.svg" alt="left">
             </div>
+            <div class="swiper-arrow swiper-button-next">
+                <img src="./img/slider/arrow-right.svg" alt="right">
+            </div>
+            <div class="swiper-pagination"></div>
         </div>
     </section>
+
     <section class="video">
         <div class="container">
             <h2 class="video__title title-h2">More recent works</h2>
@@ -221,10 +219,12 @@
             </span>
 
             <div class="socials social-network__socials">
-                <a href="https://instagram.com/mobile_auto_spa_bay_area?igshid=OGQ5ZDc2ODk2ZA==" target="_blank" class="socials__link">
+                <a href="https://instagram.com/mobile_auto_spa_bay_area?igshid=OGQ5ZDc2ODk2ZA==" target="_blank"
+                    class="socials__link">
                     <img class="socials__img" src="./img/socials/instagram.svg" alt="imstagram">
                 </a>
-                <a href="https://www.tiktok.com/@mobileautospa777?_t=8d4iWIbZo5q&_r=1" target="_blank" class="socials__link">
+                <a href="https://www.tiktok.com/@mobileautospa777?_t=8d4iWIbZo5q&_r=1" target="_blank"
+                    class="socials__link">
                     <img class="socials__img" src="./img/socials/tiktok.svg" alt="tiktok">
                 </a>
                 <a href="https://youtube.com/@MobileAutoSpa777" class="socials__link">
@@ -262,8 +262,8 @@
                         <textarea class="form__textarea" name="TEXT" placeholder="question about our services"
                             required></textarea>
                         <div class="socials form__socials">
-                            <a href="https://instagram.com/mobile_auto_spa_bay_area?igshid=OGQ5ZDc2ODk2ZA==" target="_blank"
-                                class="socials__link">
+                            <a href="https://instagram.com/mobile_auto_spa_bay_area?igshid=OGQ5ZDc2ODk2ZA=="
+                                target="_blank" class="socials__link">
                                 <img class="socials__img" src="./img/socials/instagram.svg" alt="imstagram">
                             </a>
                             <a href="https://www.tiktok.com/@mobileautospa777?_t=8d4iWIbZo5q&_r=1" target="_blank"
@@ -298,15 +298,11 @@
             </ul>
         </div>
     </footer>
-
-
-
-
-
-
-
-
-    <script src="./index.js" defer></script>
+    <a href="#headerTop" class="button-up hidden" id="btnUp">
+        <img src="./img/buttonUp/up.svg" alt="UP button">
+    </a>
+    <script src="./js/cdn.jsdelivr.net_npm_swiper@9_swiper-bundle.min.js"></script>
+    <script src="./js/index.js" defer></script>
 </body>
 
 </html>

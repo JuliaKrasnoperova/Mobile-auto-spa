@@ -6,6 +6,38 @@ window.onload = function () {
 };
 
 window.addEventListener("DOMContentLoaded", () => {
+  // Button Up
+
+  this.onscroll = function () {
+    scrollFunction();
+  };
+
+  const upbuttons = document.querySelectorAll(".button-up");
+
+  for (const upbutton of upbuttons) {
+    upbutton.addEventListener("click", clickHandler);
+  }
+
+  function clickHandler(e) {
+    e.preventDefault();
+    const href = this.getAttribute("href");
+
+    document.querySelector(href).scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 1000 ||
+      document.documentElement.scrollTop > 1000
+    ) {
+      document.getElementById("btnUp").className = "button-up visible";
+    } else {
+      document.getElementById("btnUp").className = "button-up hidden";
+    }
+  }
+
   // Tabs
   const tabs = document.querySelectorAll(".tabs__item");
   const tabsContent = document.querySelectorAll(".tabs__content");
@@ -104,76 +136,26 @@ window.addEventListener("DOMContentLoaded", () => {
     html.classList.remove("_locked");
   }
 
-  // Slider
-  const sliderImages = document.querySelectorAll(".slider__item");
-  const sliderLine = document.querySelector(".slider__line");
-  const sliderDots = document.querySelectorAll(".slider__dot");
-  const sliderBtnNext = document.querySelector(".slider__arrow-next");
-  const sliderBtnPrev = document.querySelector(".slider__arrow-prev");
-  const sliderContainer = document.querySelector(".slider__container");
+  // // Slider
 
-  if (document.contains(sliderContainer)) {
-    let sliderCount = 0;
-    let sliderWidth;
+  const swiper = new Swiper(".swiper", {
+    // Optional parameters
+    direction: "horizontal",
+    loop: true,
+    speed: 1100,
 
-    // Адаптивность слайдера
-    window.addEventListener("resize", showSlide);
+    // If we need pagination
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
 
-    // Кнопки слайдов вперед и назад
-    sliderBtnNext.addEventListener("click", nextSlide);
-    sliderBtnPrev.addEventListener("click", prevSlide);
-
-    function showSlide() {
-      sliderWidth = document.querySelector(".slider__wrapper").offsetWidth;
-      sliderLine.style.width = sliderWidth * sliderImages.length + "px";
-      sliderImages.forEach((item) => (item.style.width = sliderWidth + "px"));
-
-      rollSlider();
-    }
-
-    showSlide();
-
-    // Перелистывает слад вперед
-    function nextSlide() {
-      sliderCount++;
-      if (sliderCount >= sliderImages.length) sliderCount = 0;
-
-      rollSlider();
-      thisSlide(sliderCount);
-    }
-
-    // Перелистывает слад назад
-    function prevSlide() {
-      sliderCount--;
-      if (sliderCount < 0) sliderCount = sliderImages.length - 1;
-
-      rollSlider();
-      thisSlide(sliderCount);
-    }
-
-    // Задает шаг перемещения сладов
-    function rollSlider() {
-      sliderLine.style.transform = `translateX(${
-        -sliderCount * sliderWidth
-      }px)`;
-    }
-
-    // Указывает какой слайд по счету активен
-
-    function thisSlide(index) {
-      sliderDots.forEach((item) => item.classList.remove("slider__dot-active"));
-      sliderDots[index].classList.add("slider__dot-active");
-    }
-
-    // Вешаем клик на dot
-    sliderDots.forEach(function (dot, index) {
-      dot.addEventListener("click", function () {
-        sliderCount = index;
-        rollSlider();
-        thisSlide(sliderCount);
-      });
-    });
-  }
+    // Navigation arrows
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
 
   // Video
   const links = document.querySelectorAll("#video");
