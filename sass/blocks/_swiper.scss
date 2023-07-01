@@ -101,13 +101,3 @@
 .swiper-pagination-bullet-active {
     background: #db3138;
 }
-
-
-.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
-    width: 100%;
-    top: 112%;
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-    overflow: inherit;
-}
