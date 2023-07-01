@@ -1,8 +1,7 @@
 @import '../media/media';
 
 .swiper {
-
-    max-width: 600px;
+    max-width: 900px;
     width: 100%;
     height: auto;
     margin: 0 auto;
@@ -103,9 +102,6 @@
     background: #db3138;
 }
 
-.swiper-second {
-    max-width: 900px;
-}
 
 .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
     width: 100%;
