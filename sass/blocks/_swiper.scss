@@ -78,6 +78,8 @@
 }
 
 .swiper-pagination {
+    padding-left: 15px;
+    padding-right: 15px;
     display: flex;
     justify-content: center;
     row-gap: 11px;
@@ -96,6 +98,11 @@
     opacity: 1;
     backdrop-filter: blur(2.5px);
     border-radius: 50%;
+
+    @include mobile {
+        width: 6px;
+        height: 6px;
+    }
 }
 
 .swiper-pagination-bullet-active {

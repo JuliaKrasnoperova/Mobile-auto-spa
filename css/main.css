@@ -1221,7 +1221,6 @@ legend {
 @media (max-width: 700px) {
   .video {
     padding-top: 20px;
-    margin-top: 20px;
   }
 }
 
@@ -2350,6 +2349,8 @@ legend {
 }
 
 .swiper-pagination {
+  padding-left: 15px;
+  padding-right: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2373,6 +2374,12 @@ legend {
   -webkit-backdrop-filter: blur(2.5px);
           backdrop-filter: blur(2.5px);
   border-radius: 50%;
+}
+@media (max-width: 540px) {
+  .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+  }
 }
 
 .swiper-pagination-bullet-active {

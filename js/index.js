@@ -155,15 +155,15 @@ window.addEventListener("DOMContentLoaded", () => {
     breakpoints: {
       320: {
         slidesPerView: 1,
-        slidesPerGroup: 3,
+        slidesPerGroup: 1,
       },
       600: {
-        slidesPerView: 1,
-        slidesPerGroup: 3,
+        slidesPerView: 2,
+        slidesPerGroup: 2,
       },
       768: {
         slidesPerView: 2,
-        slidesPerGroup: 3,
+        slidesPerGroup: 2,
       },
       1000: {
         slidesPerView: 3,
