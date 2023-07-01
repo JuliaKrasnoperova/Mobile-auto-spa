@@ -136,24 +136,39 @@ window.addEventListener("DOMContentLoaded", () => {
     html.classList.remove("_locked");
   }
 
-  // // Slider
+  //  Swiper
 
-  const swiper = new Swiper(".swiper", {
-    // Optional parameters
-    direction: "horizontal",
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 10,
     loop: true,
     speed: 1100,
-
-    // If we need pagination
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
-
-    // Navigation arrows
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
+    },
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        slidesPerGroup: 3,
+      },
+      600: {
+        slidesPerView: 1,
+        slidesPerGroup: 3,
+      },
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 3,
+      },
+      1000: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+      },
     },
   });
 

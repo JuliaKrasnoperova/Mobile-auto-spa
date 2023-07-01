@@ -2314,19 +2314,9 @@ legend {
 .swiper-button-prev {
   width: 40px;
   position: absolute;
-  left: 18%;
+  left: 6%;
 }
 @media (max-width: 1200px) {
-  .swiper-button-prev {
-    left: 12%;
-  }
-}
-@media (max-width: 1024px) {
-  .swiper-button-prev {
-    left: 6%;
-  }
-}
-@media (max-width: 860px) {
   .swiper-button-prev {
     display: none;
   }
@@ -2335,19 +2325,9 @@ legend {
 .swiper-button-next {
   width: 40px;
   position: absolute;
-  left: 76%;
+  left: 89%;
 }
 @media (max-width: 1200px) {
-  .swiper-button-next {
-    left: 81%;
-  }
-}
-@media (max-width: 1024px) {
-  .swiper-button-next {
-    left: 86%;
-  }
-}
-@media (max-width: 860px) {
   .swiper-button-next {
     display: none;
   }
@@ -2360,13 +2340,25 @@ legend {
 
 .swiper-button-next,
 .swiper-button-prev {
-  width: 71px;
+  width: 60px;
 }
 
 .swiper-button-prev:active,
 .swiper-button-next:active {
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
+}
+
+.swiper-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 11px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .swiper-pagination-bullets.swiper-pagination-horizontal {
@@ -2385,6 +2377,20 @@ legend {
 
 .swiper-pagination-bullet-active {
   background: #db3138;
+}
+
+.swiper-second {
+  max-width: 900px;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+  width: 100%;
+  top: 112%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  white-space: nowrap;
+  overflow: inherit;
 }
 
 .button-up {
@@ -2413,4 +2419,5 @@ legend {
 .button-up.visible {
   opacity: 1;
 }
+
 /*# sourceMappingURL=main.css.map */

@@ -1,3 +1,5 @@
+@import '../media/media';
+
 .swiper {
 
     max-width: 600px;
@@ -37,38 +39,27 @@
 .swiper-button-prev {
     width: 40px;
     position: absolute;
-    left: 18%;
+    left: 6%;
 
     @include laptop-1200 {
-        left: 12%;
-    }
-
-    @include laptop {
-        left: 6%;
-    }
-
-    @include tablet-860 {
         display: none;
     }
+
+
+
+
 }
 
 
 .swiper-button-next {
     width: 40px;
     position: absolute;
-    left: 76%;
+    left: 89%;
 
     @include laptop-1200 {
-        left: 81%;
-    }
-
-    @include laptop {
-        left: 86%;
-    }
-
-    @include tablet-860 {
         display: none;
     }
+
 }
 
 .swiper-arrow {
@@ -77,7 +68,7 @@
 
 .swiper-button-next,
 .swiper-button-prev {
-    width: 71px;
+    width: 60px;
 }
 
 
@@ -87,9 +78,17 @@
     transform: scale(0.8);
 }
 
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    row-gap: 11px;
+    flex-wrap: wrap;
+}
+
 .swiper-pagination-bullets.swiper-pagination-horizontal {
     top: 104%;
 }
+
 
 .swiper-pagination-bullet {
     width: 10px;
@@ -102,4 +101,17 @@
 
 .swiper-pagination-bullet-active {
     background: #db3138;
+}
+
+.swiper-second {
+    max-width: 900px;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+    width: 100%;
+    top: 112%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    overflow: inherit;
 }
