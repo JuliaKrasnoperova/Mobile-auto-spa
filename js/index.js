@@ -137,40 +137,42 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   //  Swiper
+  const slider = document.querySelector(".swiper");
+  if (document.contains(slider)) {
+    const swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 10,
+      loop: true,
+      speed: 1100,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
 
-  const swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
-    spaceBetween: 10,
-    loop: true,
-    speed: 1100,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        slidesPerGroup: 1,
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+        },
+        600: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+        },
+        768: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+        },
+        1000: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+        },
       },
-      600: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-      },
-      768: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-      },
-      1000: {
-        slidesPerView: 3,
-        slidesPerGroup: 3,
-      },
-    },
-  });
+    });
+  }
 
   // Video
   const links = document.querySelectorAll("#video");
