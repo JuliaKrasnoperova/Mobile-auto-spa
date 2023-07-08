@@ -122,6 +122,9 @@
 }
 
 .header__description {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
   font-style: normal;
   font-weight: 500;
   font-size: 40px;
@@ -155,9 +158,6 @@
 }
 
 .header__button {
-  text-align: center;
-  max-width: 170px;
-  margin: 0 auto;
   margin-top: 88px;
   display: flex;
   justify-content: center;
