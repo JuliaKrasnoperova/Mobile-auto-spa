@@ -338,18 +338,20 @@
             </span>
             <form action="./mail.php" method="POST" id="form" class="form">
                 <fieldset class="form-group">
-                    <div class="form-group-row">
+                    <div>
                         <div class="form-group-row__input">
-                            <input class=" name form__input" type="text" name="FIO" placeholder="NAME" required>
+                            <input class=" name form__input form__text" type="text" name="FIO" placeholder="NAME">
                         </div>
                         <div class="form-group-row__input">
-                            <input class=" form__input" type="tel" name="PHONE" placeholder="CELL PHONE NUMBER"
-                                required>
+                            <input class=" form__input form__number" type="tel" name="PHONE"
+                                placeholder="CELL PHONE NUMBER">
                         </div>
                     </div>
                     <div class="form-group-row">
-                        <textarea class="form__textarea" name="TEXT" placeholder="question about our services"
-                            required></textarea>
+                        <div class="form-group-textarea">
+                            <textarea class="form__textarea form__text" name="TEXT"
+                                placeholder="question about our services"></textarea>
+                        </div>
                         <div class="socials form__socials">
                             <a href="https://instagram.com/mobile_auto_spa_bay_area?igshid=OGQ5ZDc2ODk2ZA=="
                                 target="_blank" class="socials__link">

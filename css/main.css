@@ -1706,6 +1706,11 @@ legend {
 
 .form-group-row__input {
   width: 100%;
+  margin-bottom: 10px;
+}
+
+.form-group-roe__input:last-child {
+  margin-bottom: 0;
 }
 
 .form__extrainfo {
@@ -1895,6 +1900,25 @@ legend {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+  }
+}
+
+.form-group-textarea {
+  width: 100%;
+}
+
+.error-label {
+  display: block;
+  margin-top: 7px;
+}
+@media (max-width: 540px) {
+  .error-label {
+    font-size: 14px;
+  }
+}
+@media (max-width: 400px) {
+  .error-label {
+    font-size: 12px;
   }
 }
 
